@@ -37,7 +37,7 @@ settable(void)
 	T = trans[1][8] = settr(18,0,0,0,0,"DO", 0, 2, 0);
 	T = T->nxt	= settr(18,0,3,0,0,"DO", 0, 2, 0);
 	    T->nxt	= settr(18,0,6,0,0,"DO", 0, 2, 0);
-	trans[1][3]	= settr(13,0,4,4,0,"((i<=(200-1)))", 0, 2, 0);
+	trans[1][3]	= settr(13,0,4,4,0,"((i<=(3-1)))", 0, 2, 0);
 	trans[1][4]	= settr(14,0,5,5,5,"(run WS(i))", 0, 2, 0);
 	trans[1][5]	= settr(15,0,8,6,6,"i = (i+1)", 0, 2, 0);
 	trans[1][6]	= settr(16,0,12,2,0,"else", 0, 2, 0);
@@ -59,7 +59,7 @@ settable(void)
 	T = trans[1][24] = settr(34,0,0,0,0,"DO", 0, 2, 0);
 	T = T->nxt	= settr(34,0,18,0,0,"DO", 0, 2, 0);
 	    T->nxt	= settr(34,0,22,0,0,"DO", 0, 2, 0);
-	trans[1][18]	= settr(28,0,19,10,0,"((i<=(200-1)))", 0, 2, 0);
+	trans[1][18]	= settr(28,0,19,10,0,"((i<=(3-1)))", 0, 2, 0);
 	trans[1][19]	= settr(29,0,20,11,11,"value = (ws_results[i]-1)", 1, 2, 0);
 	trans[1][20]	= settr(30,0,21,12,12,"responses_freq[value] = (responses_freq[value]+1)", 1, 2, 0);
 	trans[1][21]	= settr(31,0,24,13,13,"i = (i+1)", 0, 2, 0);
@@ -172,7 +172,7 @@ settable(void)
 	T = trans[1][103] = settr(113,0,0,0,0,"IF", 0, 2, 0);
 	T = T->nxt	= settr(113,0,99,0,0,"IF", 0, 2, 0);
 	    T->nxt	= settr(113,0,101,0,0,"IF", 0, 2, 0);
-	trans[1][99]	= settr(109,0,107,42,42,"(((max_value>(200/2))&&(best_value!=-(1))))", 0, 2, 0); /* m: 100 -> 107,0 */
+	trans[1][99]	= settr(109,0,107,42,42,"(((max_value>(3/2))&&(best_value!=-(1))))", 0, 2, 0); /* m: 100 -> 107,0 */
 	reached1[100] = 1;
 	trans[1][100]	= settr(0,0,0,0,0,"the_chosen_one = best_value",0,0,0);
 	trans[1][104]	= settr(114,0,106,1,0,".(goto)", 0, 2, 0); /* m: 106 -> 0,107 */

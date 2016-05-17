@@ -254,7 +254,7 @@
 
 	case 50: // STATE 9
 		;
-		now.ws_results[ Index(((P0 *)this)->id, 200) ] = trpt->bup.oval;
+		now.ws_results[ Index(((P0 *)this)->id, 3) ] = trpt->bup.oval;
 		;
 		goto R999;
 

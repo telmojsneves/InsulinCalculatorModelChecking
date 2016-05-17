@@ -139,7 +139,6 @@ inline choose_best(best_response,max_value){
 	for (i: 0 .. MAX_RESPONSES-1){
 		if
 			:: freq_with_deviation[i] > max_value -> best_response = i; max_value = freq_with_deviation[i];
-			:: freq_with_deviation[i] == max_value -> best_response = -1;
 			:: else -> skip;
 		fi
 	}

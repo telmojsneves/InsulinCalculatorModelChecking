@@ -395,7 +395,7 @@ typedef struct State {
 		unsigned short _event;
 	#endif
 #endif
-	int ws_results[200];
+	int ws_results[3];
 	int responses_freq[5];
 	int freq_with_deviation[5];
 #ifdef TRIX
