@@ -1,0 +1,45 @@
+
+//exercicio
+/*
+
+Considere um web service que disponibiliza um método que devolve um número inteiro, resultante da computação de uma função (e.g., o número
+de unidades de insulina a administrar). Aplicando N-version programming, existem três implementações distintas do web service, sendo que o
+resultado final a apresentar pela aplicação é determinado por um votador. Pretende-se verificar que o votador está correto. Considere que o votador
+e as três implementações são processos distintos, e que o votador escolhe sempre o valor mediano (colocando os valores por ordem crescente, é o valor do meio).
+Considere também que cada web service pode devolver um valor correto ou ter um comportamento incorreto. Os comportamentos incorretos consistem em
+(i) indisponibilidade para estabelecer ligação, (ii) ausência de resposta, (iii) exceção e (iv) valor incorreto.
+Por vezes o webservice retorna um código de erro, o que pode ser tanto o resultado correto (caso os parâmetros sejam inválidos) como o resultado errado
+(caso os parâmetros sejam válidos mas o web service avarie). Assuma que em dado momento, no máximo um dos web services pode avariar. Note que há
+alguma liberdade de implementação, como por exemplo o valor escolhido pelo votador quando há apenas resposta de dois web services.
+
+*/
+
+/*VOTADOR FINAL ::: considerações a ter*/
+
+/*
+    1 --------------------------------------------------------------------------
+    Dados obtidos pelos diferentes web services
+        __Cada web service tem uma resposta associada para um determinado input num determinado metodo
+        __no caso de falha a mesma pode acontecer pelas possiveis razõoes que devem ser previstas
+            (i) indisponibilidade para estabelecer ligação,
+            (ii) ausência de resposta,
+            (iii) exceção
+            (iv) valor incorreto
+            Ou seja acontece uma validação dos valores para nao ocorrerem erros na avaliação do output
+
+    2 --------------------------------------------------------------------------
+    avaliação do output (depois da validação) dos diferentes web services para obter a resposta final
+        __Votador que analisa os dados dos webservices
+            N version programming implementada no software
+            Vote on the N results produced
+                dos N valores deve ser escolhido o "maioritatio" ou seja para o qual:
+                     (numero de respostas obtidas dos webservices iguais) > N/2
+                     N deve ser um valor igual ou superior a 3
+                     N pode ser par e impar (caso par tem na mesma de cumprir (numero de respostas obtidas dos webservices iguais) > N/2
+                     apenas resultados aceitaveis podem ser considerados como resposta
+                        ou seja se em todos os webservices ocorrer uma excepção que retorne o valor 0 ou -1 por exemplo este valor não deve ser dado como resposta.
+
+        __Deve ser aplicado isto no votador/implementação
+            Software diversity: N-self-checking programming
+
+*/
