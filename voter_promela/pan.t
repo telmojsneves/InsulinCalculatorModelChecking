@@ -26,183 +26,177 @@ settable(void)
 
 	/* proctype 1: :init: */
 
-	trans[1] = (Trans **) emalloc(108*sizeof(Trans *));
+	trans[1] = (Trans **) emalloc(106*sizeof(Trans *));
 
-	T = trans[ 1][11] = settr(21,0,0,0,0,"sub-sequence", 0, 2, 0);
-	T->nxt	= settr(21,0,1,0,0,"sub-sequence", 0, 2, 0);
-	trans[1][1]	= settr(11,0,8,3,3,"i = 0", 0, 2, 0); /* m: 2 -> 0,8 */
+	T = trans[ 1][11] = settr(20,0,0,0,0,"sub-sequence", 0, 2, 0);
+	T->nxt	= settr(20,0,1,0,0,"sub-sequence", 0, 2, 0);
+	trans[1][1]	= settr(10,0,8,3,3,"i = 0", 0, 2, 0); /* m: 2 -> 0,8 */
 	reached1[2] = 1;
 	trans[1][2]	= settr(0,0,0,0,0,"i = 0",0,0,0);
-	trans[1][9]	= settr(19,0,8,1,0,".(goto)", 0, 2, 0);
-	T = trans[1][8] = settr(18,0,0,0,0,"DO", 0, 2, 0);
-	T = T->nxt	= settr(18,0,3,0,0,"DO", 0, 2, 0);
-	    T->nxt	= settr(18,0,6,0,0,"DO", 0, 2, 0);
-	trans[1][3]	= settr(13,0,4,4,0,"((i<=(3-1)))", 0, 2, 0);
-	trans[1][4]	= settr(14,0,5,5,5,"(run WS(i))", 0, 2, 0);
-	trans[1][5]	= settr(15,0,8,6,6,"i = (i+1)", 0, 2, 0);
-	trans[1][6]	= settr(16,0,12,2,0,"else", 0, 2, 0);
-	trans[1][7]	= settr(17,0,12,1,0,"goto :b1", 0, 2, 0);
-	trans[1][10]	= settr(20,0,12,1,0,"break", 0, 2, 0);
-	trans[1][12]	= settr(22,0,105,7,0,"((_nr_pr==1))", 1, 2, 0);
-	T = trans[ 1][105] = settr(115,0,0,0,0,"sub-sequence", 0, 2, 0);
-	T->nxt	= settr(115,0,13,0,0,"sub-sequence", 0, 2, 0);
-	trans[1][13]	= settr(23,0,27,8,8,"best_value = -(1)", 0, 2, 0); /* m: 14 -> 0,27 */
+	trans[1][9]	= settr(18,0,8,1,0,".(goto)", 0, 2, 0);
+	T = trans[1][8] = settr(17,0,0,0,0,"DO", 0, 2, 0);
+	T = T->nxt	= settr(17,0,3,0,0,"DO", 0, 2, 0);
+	    T->nxt	= settr(17,0,6,0,0,"DO", 0, 2, 0);
+	trans[1][3]	= settr(12,0,4,4,0,"((i<=(3-1)))", 0, 2, 0);
+	trans[1][4]	= settr(13,0,5,5,5,"(run WS(i))", 0, 2, 0);
+	trans[1][5]	= settr(14,0,8,6,6,"i = (i+1)", 0, 2, 0);
+	trans[1][6]	= settr(15,0,12,2,0,"else", 0, 2, 0);
+	trans[1][7]	= settr(16,0,12,1,0,"goto :b1", 0, 2, 0);
+	trans[1][10]	= settr(19,0,12,1,0,"break", 0, 2, 0);
+	trans[1][12]	= settr(21,0,103,7,0,"((_nr_pr==1))", 1, 2, 0);
+	T = trans[ 1][103] = settr(112,0,0,0,0,"sub-sequence", 0, 2, 0);
+	T->nxt	= settr(112,0,13,0,0,"sub-sequence", 0, 2, 0);
+	trans[1][13]	= settr(22,0,27,8,8,"best_value = -(1)", 0, 2, 0); /* m: 14 -> 0,27 */
 	reached1[14] = 1;
 	trans[1][14]	= settr(0,0,0,0,0,"max_value = 0",0,0,0);
-	T = trans[ 1][27] = settr(37,0,0,0,0,"sub-sequence", 0, 2, 0);
-	T->nxt	= settr(37,0,15,0,0,"sub-sequence", 0, 2, 0);
-	trans[1][15]	= settr(25,0,24,9,9,"value = 0", 0, 2, 0); /* m: 16 -> 0,24 */
+	T = trans[ 1][27] = settr(36,0,0,0,0,"sub-sequence", 0, 2, 0);
+	T->nxt	= settr(36,0,15,0,0,"sub-sequence", 0, 2, 0);
+	trans[1][15]	= settr(24,0,24,9,9,"value = 0", 0, 2, 0); /* m: 16 -> 0,24 */
 	reached1[16] = 1;
 	trans[1][16]	= settr(0,0,0,0,0,"i = 0",0,0,0);
 	trans[1][17]	= settr(0,0,0,0,0,"i = 0",0,0,0);
-	trans[1][25]	= settr(35,0,24,1,0,".(goto)", 0, 2, 0);
-	T = trans[1][24] = settr(34,0,0,0,0,"DO", 0, 2, 0);
-	T = T->nxt	= settr(34,0,18,0,0,"DO", 0, 2, 0);
-	    T->nxt	= settr(34,0,22,0,0,"DO", 0, 2, 0);
-	trans[1][18]	= settr(28,0,19,10,0,"((i<=(3-1)))", 0, 2, 0);
-	trans[1][19]	= settr(29,0,20,11,11,"value = (ws_results[i]-1)", 1, 2, 0);
-	trans[1][20]	= settr(30,0,21,12,12,"responses_freq[value] = (responses_freq[value]+1)", 1, 2, 0);
-	trans[1][21]	= settr(31,0,24,13,13,"i = (i+1)", 0, 2, 0);
-	trans[1][22]	= settr(32,0,60,2,0,"else", 0, 2, 0);
-	trans[1][23]	= settr(33,0,60,1,0,"goto :b2", 0, 2, 0);
-	trans[1][26]	= settr(36,0,60,1,0,"break", 0, 2, 0);
-	T = trans[ 1][60] = settr(70,0,0,0,0,"sub-sequence", 0, 2, 0);
-	T->nxt	= settr(70,0,28,0,0,"sub-sequence", 0, 2, 0);
-	trans[1][28]	= settr(38,0,57,14,14,"i = 0", 0, 2, 0); /* m: 29 -> 0,57 */
+	trans[1][25]	= settr(34,0,24,1,0,".(goto)", 0, 2, 0);
+	T = trans[1][24] = settr(33,0,0,0,0,"DO", 0, 2, 0);
+	T = T->nxt	= settr(33,0,18,0,0,"DO", 0, 2, 0);
+	    T->nxt	= settr(33,0,22,0,0,"DO", 0, 2, 0);
+	trans[1][18]	= settr(27,0,19,10,0,"((i<=(3-1)))", 0, 2, 0);
+	trans[1][19]	= settr(28,0,20,11,11,"value = (ws_results[i]-1)", 1, 2, 0);
+	trans[1][20]	= settr(29,0,21,12,12,"responses_freq[value] = (responses_freq[value]+1)", 1, 2, 0);
+	trans[1][21]	= settr(30,0,24,13,13,"i = (i+1)", 0, 2, 0);
+	trans[1][22]	= settr(31,0,60,2,0,"else", 0, 2, 0);
+	trans[1][23]	= settr(32,0,60,1,0,"goto :b2", 0, 2, 0);
+	trans[1][26]	= settr(35,0,60,1,0,"break", 0, 2, 0);
+	T = trans[ 1][60] = settr(69,0,0,0,0,"sub-sequence", 0, 2, 0);
+	T->nxt	= settr(69,0,28,0,0,"sub-sequence", 0, 2, 0);
+	trans[1][28]	= settr(37,0,57,14,14,"i = 0", 0, 2, 0); /* m: 29 -> 0,57 */
 	reached1[29] = 1;
 	trans[1][29]	= settr(0,0,0,0,0,"value = 0",0,0,0);
 	trans[1][30]	= settr(0,0,0,0,0,"i = 0",0,0,0);
-	trans[1][58]	= settr(68,0,57,1,0,".(goto)", 0, 2, 0);
-	T = trans[1][57] = settr(67,0,0,0,0,"DO", 0, 2, 0);
-	T = T->nxt	= settr(67,0,31,0,0,"DO", 0, 2, 0);
-	    T->nxt	= settr(67,0,55,0,0,"DO", 0, 2, 0);
-	trans[1][31]	= settr(41,0,32,15,0,"((i<=(5-1)))", 0, 2, 0);
-	trans[1][32]	= settr(42,0,39,16,16,"value = responses_freq[i]", 1, 2, 0);
-	T = trans[ 1][39] = settr(49,0,0,0,0,"sub-sequence", 0, 2, 0);
-	T->nxt	= settr(49,0,37,0,0,"sub-sequence", 0, 2, 0);
-	T = trans[1][37] = settr(47,0,0,0,0,"IF", 0, 2, 0);
-	T = T->nxt	= settr(47,0,33,0,0,"IF", 0, 2, 0);
-	    T->nxt	= settr(47,0,35,0,0,"IF", 0, 2, 0);
-	trans[1][33]	= settr(43,0,34,17,0,"(((((i-1)>=0)&&((i-1)<5))&&(responses_freq[(i-1)]!=0)))", 1, 2, 0);
-	trans[1][34]	= settr(44,0,46,18,18,"freq_with_deviation[(i-1)] = (freq_with_deviation[(i-1)]+value)", 1, 2, 0);
-	trans[1][38]	= settr(48,0,46,1,0,".(goto)", 0, 2, 0);
-	trans[1][35]	= settr(45,0,36,2,0,"else", 0, 2, 0);
-	trans[1][36]	= settr(46,0,46,1,0,"(1)", 0, 2, 0);
-	T = trans[ 1][46] = settr(56,0,0,0,0,"sub-sequence", 0, 2, 0);
-	T->nxt	= settr(56,0,44,0,0,"sub-sequence", 0, 2, 0);
-	T = trans[1][44] = settr(54,0,0,0,0,"IF", 0, 2, 0);
-	T = T->nxt	= settr(54,0,40,0,0,"IF", 0, 2, 0);
-	    T->nxt	= settr(54,0,42,0,0,"IF", 0, 2, 0);
-	trans[1][40]	= settr(50,0,41,19,0,"((((i>=0)&&(i<5))&&(responses_freq[i]!=0)))", 1, 2, 0);
-	trans[1][41]	= settr(51,0,53,20,20,"freq_with_deviation[i] = (freq_with_deviation[i]+value)", 1, 2, 0);
-	trans[1][45]	= settr(55,0,53,1,0,".(goto)", 0, 2, 0);
-	trans[1][42]	= settr(52,0,43,2,0,"else", 0, 2, 0);
-	trans[1][43]	= settr(53,0,53,1,0,"(1)", 0, 2, 0);
-	T = trans[ 1][53] = settr(63,0,0,0,0,"sub-sequence", 0, 2, 0);
-	T->nxt	= settr(63,0,51,0,0,"sub-sequence", 0, 2, 0);
-	T = trans[1][51] = settr(61,0,0,0,0,"IF", 0, 2, 0);
-	T = T->nxt	= settr(61,0,47,0,0,"IF", 0, 2, 0);
-	    T->nxt	= settr(61,0,49,0,0,"IF", 0, 2, 0);
-	trans[1][47]	= settr(57,0,48,21,0,"(((((i+1)>=0)&&((i+1)<5))&&(responses_freq[(i+1)]!=0)))", 1, 2, 0);
-	trans[1][48]	= settr(58,0,54,22,22,"freq_with_deviation[(i+1)] = (freq_with_deviation[(i+1)]+value)", 1, 2, 0);
-	trans[1][52]	= settr(62,0,54,1,0,".(goto)", 0, 2, 0); /* m: 54 -> 0,57 */
+	trans[1][58]	= settr(67,0,57,1,0,".(goto)", 0, 2, 0);
+	T = trans[1][57] = settr(66,0,0,0,0,"DO", 0, 2, 0);
+	T = T->nxt	= settr(66,0,31,0,0,"DO", 0, 2, 0);
+	    T->nxt	= settr(66,0,55,0,0,"DO", 0, 2, 0);
+	trans[1][31]	= settr(40,0,32,15,0,"((i<=(5-1)))", 0, 2, 0);
+	trans[1][32]	= settr(41,0,39,16,16,"value = responses_freq[i]", 1, 2, 0);
+	T = trans[ 1][39] = settr(48,0,0,0,0,"sub-sequence", 0, 2, 0);
+	T->nxt	= settr(48,0,37,0,0,"sub-sequence", 0, 2, 0);
+	T = trans[1][37] = settr(46,0,0,0,0,"IF", 0, 2, 0);
+	T = T->nxt	= settr(46,0,33,0,0,"IF", 0, 2, 0);
+	    T->nxt	= settr(46,0,35,0,0,"IF", 0, 2, 0);
+	trans[1][33]	= settr(42,0,34,17,0,"(((((i-1)>=0)&&((i-1)<5))&&(responses_freq[(i-1)]!=0)))", 1, 2, 0);
+	trans[1][34]	= settr(43,0,46,18,18,"freq_with_deviation[(i-1)] = (freq_with_deviation[(i-1)]+value)", 1, 2, 0);
+	trans[1][38]	= settr(47,0,46,1,0,".(goto)", 0, 2, 0);
+	trans[1][35]	= settr(44,0,36,2,0,"else", 0, 2, 0);
+	trans[1][36]	= settr(45,0,46,1,0,"(1)", 0, 2, 0);
+	T = trans[ 1][46] = settr(55,0,0,0,0,"sub-sequence", 0, 2, 0);
+	T->nxt	= settr(55,0,44,0,0,"sub-sequence", 0, 2, 0);
+	T = trans[1][44] = settr(53,0,0,0,0,"IF", 0, 2, 0);
+	T = T->nxt	= settr(53,0,40,0,0,"IF", 0, 2, 0);
+	    T->nxt	= settr(53,0,42,0,0,"IF", 0, 2, 0);
+	trans[1][40]	= settr(49,0,41,19,0,"((((i>=0)&&(i<5))&&(responses_freq[i]!=0)))", 1, 2, 0);
+	trans[1][41]	= settr(50,0,53,20,20,"freq_with_deviation[i] = (freq_with_deviation[i]+value)", 1, 2, 0);
+	trans[1][45]	= settr(54,0,53,1,0,".(goto)", 0, 2, 0);
+	trans[1][42]	= settr(51,0,43,2,0,"else", 0, 2, 0);
+	trans[1][43]	= settr(52,0,53,1,0,"(1)", 0, 2, 0);
+	T = trans[ 1][53] = settr(62,0,0,0,0,"sub-sequence", 0, 2, 0);
+	T->nxt	= settr(62,0,51,0,0,"sub-sequence", 0, 2, 0);
+	T = trans[1][51] = settr(60,0,0,0,0,"IF", 0, 2, 0);
+	T = T->nxt	= settr(60,0,47,0,0,"IF", 0, 2, 0);
+	    T->nxt	= settr(60,0,49,0,0,"IF", 0, 2, 0);
+	trans[1][47]	= settr(56,0,48,21,0,"(((((i+1)>=0)&&((i+1)<5))&&(responses_freq[(i+1)]!=0)))", 1, 2, 0);
+	trans[1][48]	= settr(57,0,54,22,22,"freq_with_deviation[(i+1)] = (freq_with_deviation[(i+1)]+value)", 1, 2, 0);
+	trans[1][52]	= settr(61,0,54,1,0,".(goto)", 0, 2, 0); /* m: 54 -> 0,57 */
 	reached1[54] = 1;
-	trans[1][49]	= settr(59,0,50,2,0,"else", 0, 2, 0);
-	trans[1][50]	= settr(60,0,57,23,23,"(1)", 0, 2, 0); /* m: 54 -> 57,0 */
+	trans[1][49]	= settr(58,0,50,2,0,"else", 0, 2, 0);
+	trans[1][50]	= settr(59,0,57,23,23,"(1)", 0, 2, 0); /* m: 54 -> 57,0 */
 	reached1[54] = 1;
-	trans[1][54]	= settr(64,0,57,24,24,"i = (i+1)", 0, 2, 0);
-	trans[1][55]	= settr(65,0,61,2,0,"else", 0, 2, 0);
-	trans[1][56]	= settr(66,0,61,1,0,"goto :b3", 0, 2, 0); /* m: 61 -> 0,68 */
+	trans[1][54]	= settr(63,0,57,24,24,"i = (i+1)", 0, 2, 0);
+	trans[1][55]	= settr(64,0,61,2,0,"else", 0, 2, 0);
+	trans[1][56]	= settr(65,0,61,1,0,"goto :b3", 0, 2, 0); /* m: 61 -> 0,68 */
 	reached1[61] = 1;
-	trans[1][59]	= settr(69,0,61,1,0,"break", 0, 2, 0);
-	trans[1][61]	= settr(71,0,68,25,25,"h = 0", 0, 2, 0); /* m: 62 -> 0,68 */
+	trans[1][59]	= settr(68,0,61,1,0,"break", 0, 2, 0);
+	trans[1][61]	= settr(70,0,68,25,25,"h = 0", 0, 2, 0); /* m: 62 -> 0,68 */
 	reached1[62] = 1;
 	trans[1][62]	= settr(0,0,0,0,0,"h = 0",0,0,0);
-	trans[1][69]	= settr(79,0,68,1,0,".(goto)", 0, 2, 0);
-	T = trans[1][68] = settr(78,0,0,0,0,"DO", 0, 2, 0);
-	T = T->nxt	= settr(78,0,63,0,0,"DO", 0, 2, 0);
-	    T->nxt	= settr(78,0,66,0,0,"DO", 0, 2, 0);
-	trans[1][63]	= settr(73,0,64,26,0,"((h<=(5-1)))", 0, 2, 0);
-	trans[1][64]	= settr(74,0,65,27,0,"printf('responses_freq[%d] = %d \\n',h,responses_freq[h])", 1, 2, 0);
-	trans[1][65]	= settr(75,0,68,28,28,"h = (h+1)", 0, 2, 0);
-	trans[1][66]	= settr(76,0,71,2,0,"else", 0, 2, 0);
-	trans[1][67]	= settr(77,0,71,1,0,"goto :b4", 0, 2, 0); /* m: 71 -> 0,77 */
+	trans[1][69]	= settr(78,0,68,1,0,".(goto)", 0, 2, 0);
+	T = trans[1][68] = settr(77,0,0,0,0,"DO", 0, 2, 0);
+	T = T->nxt	= settr(77,0,63,0,0,"DO", 0, 2, 0);
+	    T->nxt	= settr(77,0,66,0,0,"DO", 0, 2, 0);
+	trans[1][63]	= settr(72,0,64,26,0,"((h<=(5-1)))", 0, 2, 0);
+	trans[1][64]	= settr(73,0,65,27,0,"printf('responses_freq[%d] = %d \\n',h,responses_freq[h])", 1, 2, 0);
+	trans[1][65]	= settr(74,0,68,28,28,"h = (h+1)", 0, 2, 0);
+	trans[1][66]	= settr(75,0,71,2,0,"else", 0, 2, 0);
+	trans[1][67]	= settr(76,0,71,1,0,"goto :b4", 0, 2, 0); /* m: 71 -> 0,77 */
 	reached1[71] = 1;
-	trans[1][70]	= settr(80,0,71,1,0,"break", 0, 2, 0);
-	trans[1][71]	= settr(81,0,77,29,29,"h = 0", 0, 2, 0);
-	trans[1][78]	= settr(88,0,77,1,0,".(goto)", 0, 2, 0);
-	T = trans[1][77] = settr(87,0,0,0,0,"DO", 0, 2, 0);
-	T = T->nxt	= settr(87,0,72,0,0,"DO", 0, 2, 0);
-	    T->nxt	= settr(87,0,75,0,0,"DO", 0, 2, 0);
-	trans[1][72]	= settr(82,0,73,30,0,"((h<=(5-1)))", 0, 2, 0);
-	trans[1][73]	= settr(83,0,74,31,0,"printf('responses_with_deviation[%d] = %d \\n',h,freq_with_deviation[h])", 1, 2, 0);
-	trans[1][74]	= settr(84,0,77,32,32,"h = (h+1)", 0, 2, 0);
-	trans[1][75]	= settr(85,0,98,2,0,"else", 0, 2, 0);
-	trans[1][76]	= settr(86,0,98,1,0,"goto :b5", 0, 2, 0);
-	trans[1][79]	= settr(89,0,98,1,0,"break", 0, 2, 0);
-	T = trans[ 1][98] = settr(108,0,0,0,0,"sub-sequence", 0, 2, 0);
-	T->nxt	= settr(108,0,80,0,0,"sub-sequence", 0, 2, 0);
-	trans[1][80]	= settr(90,0,95,33,33,"i = 0", 0, 2, 0); /* m: 81 -> 0,95 */
+	trans[1][70]	= settr(79,0,71,1,0,"break", 0, 2, 0);
+	trans[1][71]	= settr(80,0,77,29,29,"h = 0", 0, 2, 0);
+	trans[1][78]	= settr(87,0,77,1,0,".(goto)", 0, 2, 0);
+	T = trans[1][77] = settr(86,0,0,0,0,"DO", 0, 2, 0);
+	T = T->nxt	= settr(86,0,72,0,0,"DO", 0, 2, 0);
+	    T->nxt	= settr(86,0,75,0,0,"DO", 0, 2, 0);
+	trans[1][72]	= settr(81,0,73,30,0,"((h<=(5-1)))", 0, 2, 0);
+	trans[1][73]	= settr(82,0,74,31,0,"printf('responses_with_deviation[%d] = %d \\n',h,freq_with_deviation[h])", 1, 2, 0);
+	trans[1][74]	= settr(83,0,77,32,32,"h = (h+1)", 0, 2, 0);
+	trans[1][75]	= settr(84,0,96,2,0,"else", 0, 2, 0);
+	trans[1][76]	= settr(85,0,96,1,0,"goto :b5", 0, 2, 0);
+	trans[1][79]	= settr(88,0,96,1,0,"break", 0, 2, 0);
+	T = trans[ 1][96] = settr(105,0,0,0,0,"sub-sequence", 0, 2, 0);
+	T->nxt	= settr(105,0,80,0,0,"sub-sequence", 0, 2, 0);
+	trans[1][80]	= settr(89,0,93,33,33,"i = 0", 0, 2, 0); /* m: 81 -> 0,93 */
 	reached1[81] = 1;
 	trans[1][81]	= settr(0,0,0,0,0,"i = 0",0,0,0);
-	trans[1][96]	= settr(106,0,95,1,0,".(goto)", 0, 2, 0);
-	T = trans[1][95] = settr(105,0,0,0,0,"DO", 0, 2, 0);
-	T = T->nxt	= settr(105,0,82,0,0,"DO", 0, 2, 0);
-	    T->nxt	= settr(105,0,93,0,0,"DO", 0, 2, 0);
-	trans[1][82]	= settr(92,0,90,34,0,"((i<=(5-1)))", 0, 2, 0);
-	T = trans[1][90] = settr(100,0,0,0,0,"IF", 0, 2, 0);
-	T = T->nxt	= settr(100,0,83,0,0,"IF", 0, 2, 0);
-	T = T->nxt	= settr(100,0,86,0,0,"IF", 0, 2, 0);
-	    T->nxt	= settr(100,0,88,0,0,"IF", 0, 2, 0);
-	trans[1][83]	= settr(93,0,84,35,35,"((freq_with_deviation[i]>max_value))", 1, 2, 0);
-	trans[1][84]	= settr(94,0,85,36,36,"best_value = i", 0, 2, 0);
-	trans[1][85]	= settr(95,0,92,37,37,"max_value = freq_with_deviation[i]", 1, 2, 0);
-	trans[1][91]	= settr(101,0,92,1,0,".(goto)", 0, 2, 0); /* m: 92 -> 0,95 */
-	reached1[92] = 1;
-	trans[1][86]	= settr(96,0,87,38,0,"((freq_with_deviation[i]==max_value))", 1, 2, 0);
-	trans[1][87]	= settr(97,0,95,39,39,"best_value = -(1)", 0, 2, 0); /* m: 92 -> 0,95 */
-	reached1[92] = 1;
-	trans[1][88]	= settr(98,0,89,2,0,"else", 0, 2, 0);
-	trans[1][89]	= settr(99,0,95,40,40,"(1)", 0, 2, 0); /* m: 92 -> 95,0 */
-	reached1[92] = 1;
-	trans[1][92]	= settr(102,0,95,41,41,"i = (i+1)", 0, 2, 0);
-	trans[1][93]	= settr(103,0,103,2,0,"else", 0, 2, 0);
-	trans[1][94]	= settr(104,0,103,1,0,"goto :b6", 0, 2, 0);
-	trans[1][97]	= settr(107,0,103,1,0,"break", 0, 2, 0);
-	T = trans[1][103] = settr(113,0,0,0,0,"IF", 0, 2, 0);
-	T = T->nxt	= settr(113,0,99,0,0,"IF", 0, 2, 0);
-	    T->nxt	= settr(113,0,101,0,0,"IF", 0, 2, 0);
-	trans[1][99]	= settr(109,0,107,42,42,"(((max_value>(3/2))&&(best_value!=-(1))))", 0, 2, 0); /* m: 100 -> 107,0 */
-	reached1[100] = 1;
-	trans[1][100]	= settr(0,0,0,0,0,"the_chosen_one = best_value",0,0,0);
-	trans[1][104]	= settr(114,0,106,1,0,".(goto)", 0, 2, 0); /* m: 106 -> 0,107 */
-	reached1[106] = 1;
-	trans[1][101]	= settr(111,0,102,2,0,"else", 0, 2, 0);
-	trans[1][102]	= settr(112,0,107,43,43,"the_chosen_one = -(1)", 0, 2, 0); /* m: 106 -> 0,107 */
-	reached1[106] = 1;
-	trans[1][106]	= settr(116,0,107,44,44,"printf('index to pick(the chosen one) = %d\\n',the_chosen_one)", 0, 2, 0);
-	trans[1][107]	= settr(117,0,0,45,45,"-end-", 0, 3500, 0);
+	trans[1][94]	= settr(103,0,93,1,0,".(goto)", 0, 2, 0);
+	T = trans[1][93] = settr(102,0,0,0,0,"DO", 0, 2, 0);
+	T = T->nxt	= settr(102,0,82,0,0,"DO", 0, 2, 0);
+	    T->nxt	= settr(102,0,91,0,0,"DO", 0, 2, 0);
+	trans[1][82]	= settr(91,0,88,34,0,"((i<=(5-1)))", 0, 2, 0);
+	T = trans[1][88] = settr(97,0,0,0,0,"IF", 0, 2, 0);
+	T = T->nxt	= settr(97,0,83,0,0,"IF", 0, 2, 0);
+	    T->nxt	= settr(97,0,86,0,0,"IF", 0, 2, 0);
+	trans[1][83]	= settr(92,0,84,35,35,"((freq_with_deviation[i]>max_value))", 1, 2, 0);
+	trans[1][84]	= settr(93,0,85,36,36,"best_value = i", 0, 2, 0);
+	trans[1][85]	= settr(94,0,90,37,37,"max_value = freq_with_deviation[i]", 1, 2, 0);
+	trans[1][89]	= settr(98,0,90,1,0,".(goto)", 0, 2, 0); /* m: 90 -> 0,93 */
+	reached1[90] = 1;
+	trans[1][86]	= settr(95,0,87,2,0,"else", 0, 2, 0);
+	trans[1][87]	= settr(96,0,93,38,38,"(1)", 0, 2, 0); /* m: 90 -> 93,0 */
+	reached1[90] = 1;
+	trans[1][90]	= settr(99,0,93,39,39,"i = (i+1)", 0, 2, 0);
+	trans[1][91]	= settr(100,0,101,2,0,"else", 0, 2, 0);
+	trans[1][92]	= settr(101,0,101,1,0,"goto :b6", 0, 2, 0);
+	trans[1][95]	= settr(104,0,101,1,0,"break", 0, 2, 0);
+	T = trans[1][101] = settr(110,0,0,0,0,"IF", 0, 2, 0);
+	T = T->nxt	= settr(110,0,97,0,0,"IF", 0, 2, 0);
+	    T->nxt	= settr(110,0,99,0,0,"IF", 0, 2, 0);
+	trans[1][97]	= settr(106,0,105,40,40,"((max_value>(3/2)))", 0, 2, 0); /* m: 98 -> 105,0 */
+	reached1[98] = 1;
+	trans[1][98]	= settr(0,0,0,0,0,"the_chosen_one = best_value",0,0,0);
+	trans[1][102]	= settr(111,0,104,1,0,".(goto)", 0, 2, 0); /* m: 104 -> 0,105 */
+	reached1[104] = 1;
+	trans[1][99]	= settr(108,0,100,2,0,"else", 0, 2, 0);
+	trans[1][100]	= settr(109,0,105,41,41,"(1)", 0, 2, 0); /* m: 104 -> 105,0 */
+	reached1[104] = 1;
+	trans[1][104]	= settr(113,0,105,42,42,"printf('index to pick(the chosen one) = %d\\n',the_chosen_one)", 0, 2, 0);
+	trans[1][105]	= settr(114,0,0,43,43,"-end-", 0, 3500, 0);
 
 	/* proctype 0: WS */
 
-	trans[0] = (Trans **) emalloc(12*sizeof(Trans *));
+	trans[0] = (Trans **) emalloc(11*sizeof(Trans *));
 
-	T = trans[ 0][10] = settr(9,0,0,0,0,"sub-sequence", 0, 2, 0);
-	T->nxt	= settr(9,0,1,0,0,"sub-sequence", 0, 2, 0);
-	trans[0][1]	= settr(0,0,5,46,46,"nr = 1", 0, 2, 0);
+	T = trans[ 0][9] = settr(8,0,0,0,0,"sub-sequence", 0, 2, 0);
+	T->nxt	= settr(8,0,1,0,0,"sub-sequence", 0, 2, 0);
+	trans[0][1]	= settr(0,0,5,44,44,"nr = 1", 0, 2, 0);
 	trans[0][6]	= settr(5,0,5,1,0,".(goto)", 0, 2, 0);
 	T = trans[0][5] = settr(4,0,0,0,0,"DO", 0, 2, 0);
 	T = T->nxt	= settr(4,0,2,0,0,"DO", 0, 2, 0);
 	    T->nxt	= settr(4,0,4,0,0,"DO", 0, 2, 0);
-	trans[0][2]	= settr(1,0,5,47,47,"((nr<5))", 0, 2, 0); /* m: 3 -> 5,0 */
+	trans[0][2]	= settr(1,0,5,45,45,"((nr<5))", 0, 2, 0); /* m: 3 -> 5,0 */
 	reached0[3] = 1;
 	trans[0][3]	= settr(0,0,0,0,0,"nr = (nr+1)",0,0,0);
-	trans[0][4]	= settr(3,0,9,48,48,"goto :b0", 0, 2, 0); /* m: 8 -> 0,9 */
-	reached0[8] = 1;
+	trans[0][4]	= settr(3,0,8,1,0,"goto :b0", 0, 2, 0);
 	trans[0][7]	= settr(6,0,8,1,0,"break", 0, 2, 0);
-	trans[0][8]	= settr(7,0,9,49,49,"assert(((nr>=1)&&(nr<=5)))", 0, 2, 0);
-	trans[0][9]	= settr(8,0,11,50,50,"ws_results[id] = nr", 1, 2, 0);
-	trans[0][11]	= settr(10,0,0,51,51,"-end-", 0, 3500, 0);
+	trans[0][8]	= settr(7,0,10,46,46,"ws_results[id] = nr", 1, 2, 0);
+	trans[0][10]	= settr(9,0,0,47,47,"-end-", 0, 3500, 0);
 	/* np_ demon: */
 	trans[_NP_] = (Trans **) emalloc(2*sizeof(Trans *));
 	T = trans[_NP_][0] = settr(9997,0,1,_T5,0,"(np_)", 1,2,0);

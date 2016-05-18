@@ -1,7 +1,8 @@
 
 /*-----------------------------DEFINES -----------------------------*/
 
-#define N_SERVICES 3 // test with more than 3, less than 3 and remember evens and odds
+#define N_SERVICES 3
+ // test with more than 3, less than 3 and remember evens and odds
 #define MAX_RESPONSES 5
 
 //insert timeout
@@ -24,6 +25,8 @@ int ws_results[N_SERVICES]; // RESULTS FROM WEB SERVICE
 int responses_freq[MAX_RESPONSES]; // counter that will save the values and increment all start at 0
 
 int freq_with_deviation[MAX_RESPONSES];
+
+int max_value_reached;
 
 /*-----------------------------METHODS AND "MACROS" -----------------------------*/
 
@@ -80,17 +83,19 @@ inline randr(id){
 	do
 	:: nr < 5 -> nr++
 	:: break
-	od
+	od;
+	
 
-    	//dont use select because probabilities and doesnt work
+    //dont use select because probabilities and doesnt work
     	//select(nr: 1 .. 10);	
-	assert(nr>=1 && nr<=5)
-    	ws_results[id] = nr;
+	//assert(nr>=1 && nr<=5)
+    ws_results[id] = nr;
 }
 
 
 
 proctype WS(byte id){
+
 
     	//http://spinroot.com/spin/Man/rand.html or http://spinroot.com/spin/Man/select.html
     	randr(id);
@@ -168,8 +173,8 @@ inline voter(the_chosen_one){
 	choose_best(best_value,max_value);
 
 	if 
-		:: max_value > N_SERVICES/2 && best_value != -1 -> the_chosen_one = best_value;
-		:: else -> the_chosen_one = -1;
+		:: max_value > N_SERVICES/2 -> the_chosen_one = best_value;
+		:: else -> skip;
 	fi
 }
 
@@ -184,11 +189,40 @@ init{
     	// create and call web services
     	run_web_services();
 
-    	(_nr_pr == 1);	
+		(_nr_pr==1);
 	
-	//execute voter majority request (similar values must be > N_SERVICES/2 )
+	
+	/*
+	byte d;
+
+	for (d : 0 .. N_SERVICES-1){
+		if 
+			::ws_results[d] == 5 -> max_value_reached = 5; printf("AT least one timeout");
+			:: else -> skip;
+		fi;
+    };
+
+	//clean variables
+	
 	voter(the_chosen_one);
+	
+	if 
+		:: the_chosen_one == -1 -> run_web_services();
+		:: else -> skip;
+	fi;
+	
+	
+
+	(_nr_pr==1);
+	*/
+	voter(the_chosen_one);
+
+		
+
+
+	//execute voter majority request (similar values must be > N_SERVICES/2 )
 	printf("index to pick(the chosen one) = %d\n", the_chosen_one )
 	
 
+	
 }

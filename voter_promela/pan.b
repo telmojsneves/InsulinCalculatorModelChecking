@@ -181,30 +181,20 @@
 		((P1 *)this)->_2_3_max_value = trpt->bup.oval;
 		;
 		goto R999;
-;
-		;
-		
-	case 39: // STATE 92
-		;
-		((P1 *)this)->_2_3_6_i = trpt->bup.ovals[1];
-		((P1 *)this)->_2_3_best_value = trpt->bup.ovals[0];
-		;
-		ungrab_ints(trpt->bup.ovals, 2);
-		goto R999;
 
-	case 40: // STATE 92
+	case 38: // STATE 90
 		;
 		((P1 *)this)->_2_3_6_i = trpt->bup.oval;
 		;
 		goto R999;
 
-	case 41: // STATE 92
+	case 39: // STATE 90
 		;
 		((P1 *)this)->_2_3_6_i = trpt->bup.oval;
 		;
 		goto R999;
 
-	case 42: // STATE 100
+	case 40: // STATE 98
 		;
 		((P1 *)this)->the_chosen_one = trpt->bup.ovals[1];
 	/* 0 */	((P1 *)this)->_2_3_max_value = trpt->bup.ovals[0];
@@ -212,18 +202,16 @@
 		;
 		ungrab_ints(trpt->bup.ovals, 2);
 		goto R999;
-
-	case 43: // STATE 102
-		;
-		((P1 *)this)->the_chosen_one = trpt->bup.oval;
-		;
+;
+		
+	case 41: // STATE 100
 		goto R999;
 ;
 		
-	case 44: // STATE 106
+	case 42: // STATE 104
 		goto R999;
 
-	case 45: // STATE 107
+	case 43: // STATE 105
 		;
 		p_restor(II);
 		;
@@ -232,33 +220,25 @@
 
 		 /* PROC WS */
 
-	case 46: // STATE 1
+	case 44: // STATE 1
 		;
 		((P0 *)this)->_1_1_nr = trpt->bup.oval;
 		;
 		goto R999;
 
-	case 47: // STATE 3
+	case 45: // STATE 3
 		;
 		((P0 *)this)->_1_1_nr = trpt->bup.oval;
 		;
 		goto R999;
-;
-		
-	case 48: // STATE 4
-		goto R999;
-;
-		
-	case 49: // STATE 8
-		goto R999;
 
-	case 50: // STATE 9
+	case 46: // STATE 8
 		;
 		now.ws_results[ Index(((P0 *)this)->id, 3) ] = trpt->bup.oval;
 		;
 		goto R999;
 
-	case 51: // STATE 11
+	case 47: // STATE 10
 		;
 		p_restor(II);
 		;
