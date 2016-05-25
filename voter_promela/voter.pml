@@ -118,18 +118,18 @@ inline run_web_services(){
 
 inline calculate_frequency_on_results(){
 	int value;
-	int i;
+	int ij;
 
-	for (i : 0 .. N_SERVICES-1){
+	for (ij : 0 .. N_SERVICES-1){
 		// array starts at 0 so responses_freq[0] is really how many times response 1 occurs
-		value = ws_results[i] - 1; 
+		value = ws_results[ij] - 1; 
 	
 		responses_freq[value] = responses_freq[value] + 1
 
 	}
 	/* TESTING the values*/
-	/*for (i: 0 .. MAX_RESPONSES-1){
-		printf("responses_freq[%d] = %d\n", i,responses_freq[i]);
+	/*for (ij: 0 .. MAX_RESPONSES-1){
+		printf("responses_freq[%d] = %d\n", ij,responses_freq[ij]);
 	}*/
 	
 
@@ -139,11 +139,11 @@ inline calculate_frequency_on_results(){
 inline choose_best(best_response,max_value){
 
 	//max value will hold the best frequency so far
-	int i;
+	int ih;
 
-	for (i: 0 .. MAX_RESPONSES-1){
+	for (ih: 0 .. MAX_RESPONSES-1){
 		if
-			:: freq_with_deviation[i] > max_value -> best_response = i; max_value = freq_with_deviation[i];
+			:: freq_with_deviation[ih] > max_value -> best_response = ih; max_value = freq_with_deviation[ih];
 			:: else -> skip;
 		fi
 	}
@@ -191,8 +191,8 @@ init{
 
 		(_nr_pr==1);
 	
-	
 	/*
+	
 	byte d;
 
 	for (d : 0 .. N_SERVICES-1){
